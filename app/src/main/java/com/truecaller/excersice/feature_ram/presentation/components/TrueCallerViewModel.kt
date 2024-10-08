@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.presentation.screens
+package com.truecaller.excersice.feature_ram.presentation.components
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

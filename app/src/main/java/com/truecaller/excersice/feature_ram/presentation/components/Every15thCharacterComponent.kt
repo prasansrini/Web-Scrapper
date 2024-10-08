@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.presentation.screens
+package com.truecaller.excersice.feature_ram.presentation.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -27,7 +27,7 @@ import com.truecaller.excersice.feature_ram.ui.theme.PurpleGrey40
 import com.truecaller.excersice.feature_ram.ui.theme.blue
 
 @Composable
-fun First15thCharacterScreen(
+fun Every15thCharacterComponent(
     viewModel: TrueCallerViewModel = hiltViewModel()
 ) {
     var characterAt15State by remember {

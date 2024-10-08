@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -19,8 +20,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.truecaller.excersice.feature_ram.presentation.components.Every15thCharacterComponent
 import com.truecaller.excersice.feature_ram.ui.theme.TrueCallerAppTheme
-import com.truecaller.excersice.feature_ram.presentation.screens.First15thCharacterScreen
+import com.truecaller.excersice.feature_ram.presentation.components.First15thCharacterComponent
+import com.truecaller.excersice.feature_ram.presentation.components.WordCountComponent
 import com.truecaller.excersice.feature_ram.ui.theme.ColorPrimary
 import com.truecaller.excersice.feature_ram.ui.theme.PurpleGrey40
 import dagger.hilt.android.AndroidEntryPoint
@@ -33,9 +36,13 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             TrueCallerAppTheme {
-                First15thCharacterScreen()
-                Spacer(modifier = Modifier.padding(all = 8.dp))
-
+                Column {
+                    First15thCharacterComponent()
+                    Spacer(modifier = Modifier.padding(all = 8.dp))
+                    Every15thCharacterComponent()
+                    Spacer(modifier = Modifier.padding(all = 8.dp))
+                    WordCountComponent()
+                }
             }
         }
     }
