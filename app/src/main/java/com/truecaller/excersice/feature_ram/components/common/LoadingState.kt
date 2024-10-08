@@ -6,7 +6,6 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.truecaller.excersice.feature_ram.ui.theme.ColorAction
 import com.truecaller.excersice.feature_ram.ui.theme.blue
 
 @Composable
