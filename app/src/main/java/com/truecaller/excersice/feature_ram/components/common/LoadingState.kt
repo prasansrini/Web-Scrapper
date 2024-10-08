@@ -7,15 +7,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.truecaller.excersice.feature_ram.ui.theme.ColorAction
+import com.truecaller.excersice.feature_ram.ui.theme.blue
 
 @Composable
 fun LoadingState(
-		modifier: Modifier = Modifier
+    modifier: Modifier = Modifier
 ) {
-	CircularProgressIndicator(
-		modifier = modifier
-			.fillMaxSize()
-			.padding(all = 128.dp),
-		color = ColorAction
-	)
+    CircularProgressIndicator(
+        modifier = modifier
+            .fillMaxSize()
+            .padding(all = 128.dp), color = blue
+    )
 }
