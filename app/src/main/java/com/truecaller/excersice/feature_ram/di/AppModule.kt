@@ -5,7 +5,7 @@ import com.truecaller.excersice.feature_ram.domain.repository.TrueCallerReposito
 import com.truecaller.excersice.feature_ram.domain.use_case.Get15ThCharacterUseCase
 import com.truecaller.excersice.feature_ram.domain.use_case.GetEvery15ThCharacterUseCase
 import com.truecaller.excersice.feature_ram.domain.use_case.GetWordCounter
-import com.truecaller.excersice.feature_ram.domain.use_case.TruecallerUseCases
+import com.truecaller.excersice.feature_ram.domain.use_case.TrueCallerUseCases
 import com.truecaller.network.repository.TrueCallerApiClient
 import com.truecaller.network.repository.TrueCallerApiClientImpl
 import dagger.Module
@@ -25,8 +25,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun providesUseCases(repository: TrueCallerRepository): TruecallerUseCases {
-        return TruecallerUseCases(
+    fun providesUseCases(repository: TrueCallerRepository): TrueCallerUseCases {
+        return TrueCallerUseCases(
             get15ThCharacter = Get15ThCharacterUseCase(repository),
             getEvery15ThCharacter = GetEvery15ThCharacterUseCase(repository),
             getWordCounter = GetWordCounter(repository)

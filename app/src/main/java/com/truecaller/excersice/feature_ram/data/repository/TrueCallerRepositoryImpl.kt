@@ -16,11 +16,11 @@ class TrueCallerRepositoryImpl @Inject constructor(
         return client.fetchTrueCallerInformation()
     }
 
-    override fun fetchEvery15thCharacter(): ApiOperation<List<String>> {
-        TODO("Not yet implemented")
+    override suspend fun fetchEvery15thCharacter(): ApiOperation<List<String>> {
+        return client.fetchTrueCallerList()
     }
 
-    override fun fetchWordCount(): ApiOperation<Map<String, Int>> {
+    override suspend fun fetchWordCount(): ApiOperation<Map<String, Int>> {
         TODO("Not yet implemented")
     }
 }

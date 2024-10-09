@@ -44,6 +44,7 @@ fun WordCountComponent(
         Column(
             modifier = Modifier
                 .fillMaxWidth(1f)
+                .padding(all = 8.dp)
                 .border(
                     width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
                 )

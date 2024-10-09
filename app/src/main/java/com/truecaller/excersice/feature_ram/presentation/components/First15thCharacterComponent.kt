@@ -41,40 +41,46 @@ fun First15thCharacterComponent(
     }
 
     characterAt15State?.let {
-        Column(
+        MainCharacterComponent(it)
+    } ?: LoadingState()
+}
+
+@Composable
+fun MainCharacterComponent(characterAtFifteen: String) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth(1f)
+            .padding(all = 8.dp)
+            .border(
+                width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
+            )
+            .padding(all = 8.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(
+            text = "Truecaller15thCharacterRequest",
+            fontSize = 12.sp,
+            color = blue,
+            fontStyle = FontStyle.Normal,
+            fontFamily = FontFamily.Default,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(all = 4.dp)
+        )
+
+        Spacer(modifier = Modifier.padding(all = 8.dp))
+
+        Text(
+            text = "15th character is \"$characterAtFifteen\"",
+            fontSize = 24.sp,
+            color = ColorPrimary,
+            fontStyle = FontStyle.Normal,
+            fontFamily = FontFamily.Default,
+            textAlign = TextAlign.Center,
             modifier = Modifier
-                .fillMaxWidth(1f)
                 .border(
                     width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
                 )
-                .padding(all = 8.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            Text(
-                text = "Truecaller15thCharacterRequest",
-                fontSize = 12.sp,
-                color = blue,
-                fontStyle = FontStyle.Normal,
-                fontFamily = FontFamily.Default,
-                textAlign = TextAlign.Center,
-                modifier = Modifier.padding(all = 4.dp)
-            )
-
-            Spacer(modifier = Modifier.padding(all = 8.dp))
-
-            Text(
-                text = "15th character is \"$it\"",
-                fontSize = 24.sp,
-                color = ColorPrimary,
-                fontStyle = FontStyle.Normal,
-                fontFamily = FontFamily.Default,
-                textAlign = TextAlign.Center,
-                modifier = Modifier
-                    .border(
-                        width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
-                    )
-                    .padding(all = 4.dp)
-            )
-        }
-    } ?: LoadingState()
+                .padding(all = 4.dp)
+        )
+    }
 }

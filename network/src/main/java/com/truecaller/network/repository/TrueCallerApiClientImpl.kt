@@ -40,11 +40,23 @@ class TrueCallerApiClientImpl : TrueCallerApiClient {
         }
 
         return safeApiCall {
-            client
-                .get("/blog/life-at-truecaller/life-as-an-android-engineer")
-                .body<String>()
+            client.get("/blog/life-at-truecaller/life-as-an-android-engineer").body<String>()
                 .also { data ->
                     characterCache = data
+                }
+        }
+    }
+
+    override suspend fun fetchTrueCallerList(): ApiOperation<List<String>> {
+        characterCache?.let {
+            Log.d(TAG, "Fetching from the cache...")
+            return ApiOperation.Success(it.splitToSequence("").filter { it.isNotEmpty() }.toList())
+        }
+
+        return safeApiCall {
+            client.get("/blog/life-at-truecaller/life-as-an-android-engineer").body<String>()
+                .splitToSequence("").filter { it.isNotEmpty() }.toList().also { data ->
+                    characterCache = data.joinToString(prefix = "", postfix = "", separator = "")
                 }
         }
     }
