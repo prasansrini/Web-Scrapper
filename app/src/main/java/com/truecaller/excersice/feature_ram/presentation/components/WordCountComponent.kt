@@ -1,12 +1,9 @@
 package com.truecaller.excersice.feature_ram.presentation.components
 
-import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -26,10 +23,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.truecaller.excersice.feature_ram.components.common.DataPoint
-import com.truecaller.excersice.feature_ram.components.common.DataPointComponent
 import com.truecaller.excersice.feature_ram.components.common.DataPointWordCountComponent
 import com.truecaller.excersice.feature_ram.components.common.LoadingState
-import com.truecaller.excersice.feature_ram.ui.theme.ColorPrimary
 import com.truecaller.excersice.feature_ram.ui.theme.PurpleGrey40
 import com.truecaller.excersice.feature_ram.ui.theme.blue
 
@@ -49,7 +44,7 @@ fun WordCountComponent(
 
     characterAt15State?.let {
         MainWordCountComponent(it)
-    } ?: LoadingState()
+    }
 }
 
 @Composable
@@ -57,12 +52,11 @@ fun MainWordCountComponent(map: Map<String, Int>) {
     Column(
         modifier = Modifier
             .fillMaxWidth(1f)
-            .padding(all = 8.dp)
+            .padding(8.dp)
             .border(
                 width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
             )
-            .padding(all = 16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .padding(all = 16.dp)
     ) {
         Text(
             text = "TruecallerWordCounterRequest",
@@ -71,7 +65,9 @@ fun MainWordCountComponent(map: Map<String, Int>) {
             fontStyle = FontStyle.Normal,
             fontFamily = FontFamily.Default,
             textAlign = TextAlign.Center,
-            modifier = Modifier.padding(all = 4.dp)
+            modifier = Modifier
+                .padding(all = 4.dp)
+                .align(Alignment.CenterHorizontally)
         )
 
         Spacer(modifier = Modifier.padding(all = 8.dp))
@@ -79,10 +75,8 @@ fun MainWordCountComponent(map: Map<String, Int>) {
         LazyColumn {
             map.forEach { (key, value) ->
                 item {
-                    Row(
-                        modifier = Modifier
-                            .padding(all = 12.dp)
-//                            .height(48.dp)
+                    Column(
+                        modifier = Modifier.padding(all = 12.dp)
                     ) {
                         DataPointWordCountComponent(
                             dataPoint = DataPoint(key, value.toString())

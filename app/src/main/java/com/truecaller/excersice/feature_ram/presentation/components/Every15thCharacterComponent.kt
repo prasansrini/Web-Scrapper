@@ -45,7 +45,7 @@ fun Every15thCharacterComponent(
 
     characterAt15State?.let {
         MainEvery15thCharacterComponent(it)
-    } ?: LoadingState()
+    }
 }
 
 @Composable

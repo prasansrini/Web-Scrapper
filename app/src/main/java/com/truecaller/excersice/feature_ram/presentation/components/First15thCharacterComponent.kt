@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.truecaller.excersice.feature_ram.components.common.LoadingState
+import com.truecaller.excersice.feature_ram.ui.theme.ColorAction
 import com.truecaller.excersice.feature_ram.ui.theme.ColorPrimary
 import com.truecaller.excersice.feature_ram.ui.theme.PurpleGrey40
 import com.truecaller.excersice.feature_ram.ui.theme.blue
@@ -54,8 +55,7 @@ fun MainCharacterComponent(characterAtFifteen: String) {
             .border(
                 width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
             )
-            .padding(all = 8.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+            .padding(all = 8.dp), horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
             text = "Truecaller15thCharacterRequest",
@@ -71,14 +71,15 @@ fun MainCharacterComponent(characterAtFifteen: String) {
 
         Text(
             text = "15th character is \"$characterAtFifteen\"",
-            fontSize = 24.sp,
+            fontSize = 16.sp,
             color = ColorPrimary,
             fontStyle = FontStyle.Normal,
             fontFamily = FontFamily.Default,
             textAlign = TextAlign.Center,
             modifier = Modifier
+                .fillMaxWidth()
                 .border(
-                    width = 2.dp, color = PurpleGrey40, shape = RoundedCornerShape(8.dp)
+                    width = 2.dp, color = ColorAction, shape = RoundedCornerShape(8.dp)
                 )
                 .padding(all = 4.dp)
         )
