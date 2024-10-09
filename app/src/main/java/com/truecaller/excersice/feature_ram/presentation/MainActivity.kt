@@ -37,6 +37,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             TrueCallerAppTheme {
                 Column {
+                    Spacer(modifier = Modifier.padding(all = 8.dp))
                     First15thCharacterComponent()
                     Spacer(modifier = Modifier.padding(all = 8.dp))
                     Every15thCharacterComponent()

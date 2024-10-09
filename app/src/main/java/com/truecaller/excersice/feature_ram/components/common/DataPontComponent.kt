@@ -2,6 +2,7 @@ package com.truecaller.excersice.feature_ram.components.common
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -12,10 +13,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.truecaller.excersice.feature_ram.ui.theme.ColorAction
 import com.truecaller.excersice.feature_ram.ui.theme.ColorPrimary
-import com.truecaller.excersice.feature_ram.ui.theme.ColorTextPrimary
 
 data class DataPoint(
-    val title: String
+    val data: String, val value: String? = null
 )
 
 @Composable
@@ -28,7 +28,39 @@ fun DataPointComponent(dataPoint: DataPoint) {
             .padding(12.dp)
     ) {
         Text(
-            text = dataPoint.title,
+            text = dataPoint.data,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Bold,
+            color = ColorPrimary
+        )
+    }
+}
+
+@Composable
+fun DataPointWordCountComponent(dataPoint: DataPoint) {
+    Row(
+        modifier = Modifier
+            .border(
+                width = 2.dp, color = ColorAction, shape = RoundedCornerShape(size = 12.dp)
+            )
+            .padding(12.dp)
+    ) {
+        Text(
+            text = dataPoint.data,
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Normal,
+            color = ColorPrimary
+        )
+
+        Text(
+            text = ": ",
+            fontSize = 14.sp,
+            fontWeight = FontWeight.Normal,
+            color = ColorPrimary
+        )
+
+        Text(
+            text = dataPoint.value!!,
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold,
             color = ColorPrimary

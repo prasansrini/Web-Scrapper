@@ -10,4 +10,3 @@ class GetWordCounter(
         return repository.fetchWordCount()
     }
 }
-

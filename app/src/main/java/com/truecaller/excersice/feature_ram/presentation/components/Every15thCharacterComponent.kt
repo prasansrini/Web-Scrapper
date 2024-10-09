@@ -74,7 +74,7 @@ fun MainEvery15thCharacterComponent(every15thCharacter: List<String>) {
                     Row(
                         modifier = Modifier
                             .padding(all = 12.dp)
-                            .height(48.dp)
+                            .height(52.dp)
                     ) {
                         DataPointComponent(
                             dataPoint = DataPoint(characterValue)

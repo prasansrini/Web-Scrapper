@@ -21,6 +21,6 @@ class TrueCallerRepositoryImpl @Inject constructor(
     }
 
     override suspend fun fetchWordCount(): ApiOperation<Map<String, Int>> {
-        TODO("Not yet implemented")
+        return client.fetchWordCount()
     }
 }

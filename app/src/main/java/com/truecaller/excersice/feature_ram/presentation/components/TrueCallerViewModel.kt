@@ -40,4 +40,16 @@ class TrueCallerViewModel @Inject constructor(
             }
         }
     }
+
+    fun fetchWordCount(
+        apiCallback: (Map<String, Int>) -> Unit
+    ) {
+        viewModelScope.launch {
+            trueCallerUseCases.getWordCounter.invoke().onSuccess {
+                apiCallback(it)
+            }.onFailure {
+                Log.e(TAG, "Error in fetching character from TrueCaller API!")
+            }
+        }
+    }
 }
