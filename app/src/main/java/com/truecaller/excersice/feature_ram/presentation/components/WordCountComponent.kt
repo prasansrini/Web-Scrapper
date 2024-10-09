@@ -44,7 +44,7 @@ fun WordCountComponent(
 
     characterAt15State?.let {
         MainWordCountComponent(it)
-    }
+    } ?: LoadingState()
 }
 
 @Composable
