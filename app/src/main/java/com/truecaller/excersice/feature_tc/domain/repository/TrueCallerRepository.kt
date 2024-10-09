@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.domain.repository
+package com.truecaller.excersice.feature_tc.domain.repository
 
 import com.truecaller.network.repository.ApiOperation
 

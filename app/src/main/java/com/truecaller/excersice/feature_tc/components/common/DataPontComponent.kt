@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.components.common
+package com.truecaller.excersice.feature_tc.components.common
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -12,8 +12,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.truecaller.excersice.feature_ram.ui.theme.ColorAction
-import com.truecaller.excersice.feature_ram.ui.theme.ColorPrimary
+import com.truecaller.excersice.feature_tc.ui.theme.ColorAction
+import com.truecaller.excersice.feature_tc.ui.theme.ColorPrimary
 
 data class DataPoint(
     val character: String, val wordOccurrence: String? = null

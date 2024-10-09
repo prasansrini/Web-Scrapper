@@ -1,6 +1,6 @@
-package com.truecaller.excersice.feature_ram.domain.use_case
+package com.truecaller.excersice.feature_tc.domain.use_case
 
-import com.truecaller.excersice.feature_ram.domain.repository.TrueCallerRepository
+import com.truecaller.excersice.feature_tc.domain.repository.TrueCallerRepository
 import com.truecaller.network.repository.ApiOperation
 
 class Get15ThCharacterUseCase(

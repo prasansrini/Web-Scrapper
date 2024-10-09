@@ -1,11 +1,11 @@
-package com.truecaller.excersice.feature_ram.di
+package com.truecaller.excersice.feature_tc.di
 
-import com.truecaller.excersice.feature_ram.data.repository.TrueCallerRepositoryImpl
-import com.truecaller.excersice.feature_ram.domain.repository.TrueCallerRepository
-import com.truecaller.excersice.feature_ram.domain.use_case.Get15ThCharacterUseCase
-import com.truecaller.excersice.feature_ram.domain.use_case.GetEvery15ThCharacterUseCase
-import com.truecaller.excersice.feature_ram.domain.use_case.GetWordCounter
-import com.truecaller.excersice.feature_ram.domain.use_case.TrueCallerUseCases
+import com.truecaller.excersice.feature_tc.data.repository.TrueCallerRepositoryImpl
+import com.truecaller.excersice.feature_tc.domain.repository.TrueCallerRepository
+import com.truecaller.excersice.feature_tc.domain.use_case.Get15ThCharacterUseCase
+import com.truecaller.excersice.feature_tc.domain.use_case.GetEvery15ThCharacterUseCase
+import com.truecaller.excersice.feature_tc.domain.use_case.GetWordCounter
+import com.truecaller.excersice.feature_tc.domain.use_case.TrueCallerUseCases
 import com.truecaller.network.repository.TrueCallerApiClient
 import com.truecaller.network.repository.TrueCallerApiClientImpl
 import dagger.Module

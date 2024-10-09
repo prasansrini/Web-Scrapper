@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.domain.use_case
+package com.truecaller.excersice.feature_tc.domain.use_case
 
 data class TrueCallerUseCases(
     val get15ThCharacter: Get15ThCharacterUseCase,

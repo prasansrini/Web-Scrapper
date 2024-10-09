@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.ui.theme
+package com.truecaller.excersice.feature_tc.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

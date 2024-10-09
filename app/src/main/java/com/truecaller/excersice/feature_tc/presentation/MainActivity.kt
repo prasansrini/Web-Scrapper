@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.presentation
+package com.truecaller.excersice.feature_tc.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -20,12 +20,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.truecaller.excersice.feature_ram.presentation.components.Every15thCharacterComponent
-import com.truecaller.excersice.feature_ram.ui.theme.TrueCallerAppTheme
-import com.truecaller.excersice.feature_ram.presentation.components.First15thCharacterComponent
-import com.truecaller.excersice.feature_ram.presentation.components.WordCountComponent
-import com.truecaller.excersice.feature_ram.ui.theme.ColorPrimary
-import com.truecaller.excersice.feature_ram.ui.theme.PurpleGrey40
+import com.truecaller.excersice.feature_tc.presentation.components.Every15thCharacterComponent
+import com.truecaller.excersice.feature_tc.ui.theme.TrueCallerAppTheme
+import com.truecaller.excersice.feature_tc.presentation.components.First15thCharacterComponent
+import com.truecaller.excersice.feature_tc.presentation.components.WordCountComponent
+import com.truecaller.excersice.feature_tc.ui.theme.ColorPrimary
+import com.truecaller.excersice.feature_tc.ui.theme.PurpleGrey40
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

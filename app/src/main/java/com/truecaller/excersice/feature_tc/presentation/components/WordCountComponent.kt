@@ -1,4 +1,4 @@
-package com.truecaller.excersice.feature_ram.presentation.components
+package com.truecaller.excersice.feature_tc.presentation.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -22,11 +22,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.truecaller.excersice.feature_ram.components.common.DataPoint
-import com.truecaller.excersice.feature_ram.components.common.DataPointWordCountComponent
-import com.truecaller.excersice.feature_ram.components.common.LoadingState
-import com.truecaller.excersice.feature_ram.ui.theme.PurpleGrey40
-import com.truecaller.excersice.feature_ram.ui.theme.blue
+import com.truecaller.excersice.feature_tc.components.common.DataPoint
+import com.truecaller.excersice.feature_tc.components.common.DataPointWordCountComponent
+import com.truecaller.excersice.feature_tc.components.common.LoadingState
+import com.truecaller.excersice.feature_tc.ui.theme.PurpleGrey40
+import com.truecaller.excersice.feature_tc.ui.theme.blue
 
 @Composable
 fun WordCountComponent(

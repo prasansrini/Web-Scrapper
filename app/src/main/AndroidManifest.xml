@@ -14,7 +14,7 @@
             android:theme="@style/Theme.TruecallerApp"
             >
         <activity
-                android:name="com.truecaller.excersice.feature_ram.presentation.MainActivity"
+                android:name="com.truecaller.excersice.feature_tc.presentation.MainActivity"
                 android:exported="true"
                 android:theme="@style/Theme.TruecallerApp">
             <intent-filter>

@@ -1,9 +1,9 @@
-package com.truecaller.excersice.feature_ram.presentation.components
+package com.truecaller.excersice.feature_tc.presentation.components
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.truecaller.excersice.feature_ram.domain.use_case.TrueCallerUseCases
+import com.truecaller.excersice.feature_tc.domain.use_case.TrueCallerUseCases
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

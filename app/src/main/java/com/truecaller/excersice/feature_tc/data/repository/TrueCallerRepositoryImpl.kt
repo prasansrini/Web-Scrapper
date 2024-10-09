@@ -1,7 +1,6 @@
-package com.truecaller.excersice.feature_ram.data.repository
+package com.truecaller.excersice.feature_tc.data.repository
 
-import android.util.Log
-import com.truecaller.excersice.feature_ram.domain.repository.TrueCallerRepository
+import com.truecaller.excersice.feature_tc.domain.repository.TrueCallerRepository
 import com.truecaller.network.repository.ApiOperation
 import com.truecaller.network.repository.TrueCallerApiClient
 import javax.inject.Inject
